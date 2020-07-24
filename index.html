@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NomadList Remake</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
 </head>
 <body>
 
 <nav class="navbar">
     <div class="navbar__logo">
-        <a href="#" class="navbar_logo-link">
+        <a href="#" class="navbar__logo-link">
         <img src="logo.svg" alt="">
     </a>
     </div>
     <div class="navbar__searchbox">
-        <i class="fas-fa-search"></i>
+        <i class="fas fa-search"></i>
         <input type="text" placeholder="Search" class="navbar__searchbox-text">
     </div>
 
@@ -32,8 +34,8 @@
             <li><a href="#"><i class="fas fa-ellipsis-h"></i></a></li>
         </ul>
     </div>
-
-
+</nav>
+    
 <!-- Home Hero -->
 <section class="hero">
     <div class="hero__container">
@@ -49,13 +51,25 @@
 
         <div class="hero__modal">
             <div class="hero__modal-thumbnail">
-                <div class="hero__modal-thumbnail-btn"><i class="fas-fa-play"></i> </div>
+       
+                <div class="hero__modal-thumbnail-btn"><i class="fas fa-play-circle fa-4x"></i> </div>
             </div>
             <div class="hero__modal-email-input"><input type="email" placeholder="Enter Your Email"></div>
             <div class="hero__signup-btn"><a href="#">Join Nomad List</a></div>
         </div>
-        <div class="hero__svg-wave"></div>
-        <div class="hero__logo-container">
+
+
+    </div>
+    <div class="hero__svg-wave">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#FFF" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,74.7C640,75,800,117,960,122.7C1120,128,1280,96,1360,80L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
+          </svg>
+    </div>
+
+
+    </section>
+
+        <div class="logo-container">
             <p>As seen in</p>
             <div class="hero__logo"><img src="#" alt=""></div>
             <div class="hero__logo"><img src="#" alt=""></div>
@@ -66,14 +80,10 @@
         </div>
 
 
-    </div>
-</section>
 
 
 
 
-</nav>
-    
 
 </body>
 </html>
