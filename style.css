@@ -62,23 +62,37 @@ input:focus {
 }
 
 .navbar__menu {
-  width: 300px;
+  width: 400px;
   height: 400px;
   background: #fff;
   position: absolute;
   border-radius: 5px;
   display: none;
+  z-index: 99;
 }
 
-.navbar__menu ul {
-  display: block;
-}
-
-.navbar__menu li {
+.navbar__menu-row {
+  display: flex;
   color: #000;
-  margin: 1rem;
+  justify-content: space-evenly;
+padding: 0 .3rem;
 }
 
+.navbar__menu-row:nth-child(even) {
+  border-bottom: 1px dotted #ddd;
+}
+
+.navbar__menu-row div{
+  width: 50%;
+  padding: .5rem;
+  cursor: pointer;
+}
+
+
+.navbar__menu-row div:hover{
+ background: rgb(255, 71, 66);
+ color: #FFF;
+}
 /* Set Button Positioning */
 .navbar__new-button {
   font-size: 0.3rem;
@@ -149,6 +163,17 @@ input:focus {
   margin-bottom: 2rem;
 }
 
+.hero::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .hero__container {
   display: flex;
   height: 100%;
@@ -163,6 +188,7 @@ input:focus {
 .hero__headline {
   margin: 0 3rem;
   width: 40%;
+  z-index: 2;
 }
 
 .hero__headline h1 {
@@ -174,14 +200,35 @@ input:focus {
 .hero__headline p {
   font-size: 1.5rem;
   text-shadow: rgba(0, 0, 0, 0.25) 2px 1px 1px;
+  margin-bottom: 1rem;
 }
 
 .hero__headline p:hover {
-}
-
-.hero__headline:hover {
   opacity: 0.6;
 }
+
+.hero__headline h1:hover {
+  opacity: 0.6;
+}
+
+.hero_avatars{
+  display:flex;
+  flex-wrap: nowrap;
+  position: relative;
+}
+.hero__avatars img{
+  width: 40px;
+  border-radius: 50%;;
+  border: 2px #FFF solid;
+}
+
+.hero__avatars img{
+display: inline-block;
+position: relative;
+margin-right:-10px;
+}
+
+
 
 .hero__modal {
   align-self: flex-end;
@@ -290,7 +337,7 @@ input:focus {
   display: flex;
   justify-content: space-between;
   color: #000;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 
 .cards__filter-bar-left,
@@ -353,8 +400,8 @@ input:focus {
 }
 
 .cards__card {
-  width: 32%;
-  height: 200px;
+  width: calc(25% - 1rem);
+  height: 250px;
   border-radius: 5px;
   color: #fff;
   font-weight: bold;
@@ -364,6 +411,7 @@ input:focus {
   justify-content: space-between;
   padding: 0.75rem;
   margin: 0.5rem;
+  cursor: pointer;
 }
 
 /* Card Top Part */
@@ -421,8 +469,22 @@ input:focus {
   font-size: 10px;
 }
 
+.cards__card-bottom-left{
+
+  display: flex;
+  align-items: center;
+}
+
+.cards__card-bottom-left > * {
+  margin: 0 .25rem;
+}
+
 .cards__card-weather-icon {
   font-size: 1.5rem;
+}
+
+.cards__card-price-text{
+ font-size: 1rem;
 }
 
 /* City Modifiers */
