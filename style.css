@@ -127,8 +127,6 @@ input:focus {
 }
 
 /* Add Transparent overlay on the bg */
-.hero__container::before {
-}
 
 .hero__headline {
   margin: 0 3rem;
@@ -139,11 +137,24 @@ input:focus {
   font-size: 2.75rem;
   font-weight: bold;
   text-shadow: rgba(0, 0, 0, 0.25) 2px 1px 1px;
+
+  border: 1px solid red;
 }
 
 .hero__headline p {
   font-size: 1.5rem;
   text-shadow: rgba(0, 0, 0, 0.25) 2px 1px 1px;
+}
+
+.hero__headline p:hover{
+
+  border: 1px solid red;
+}
+
+.hero__headline:hover {
+  opacity: 0.6;
+  
+  border: 1px solid green;
 }
 
 .hero__modal {
@@ -206,10 +217,11 @@ input:focus {
 
 .logo-container {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
   margin: auto;
-  width: 40%;
+  width: 50%;
   z-index: 4;
   margin-bottom: 2rem;
 }
@@ -224,6 +236,7 @@ input:focus {
   filter: grayscale(100%);
   opacity: 0.5;
   z-index: 12;
+  margin: 0 0.5rem;
 }
 
 /* De Wave moet zo in de hero class zitten dat de positionering direct van de bodem werkt. Daarvoor moet waarschijlijjk de hero klas een relative zijn. DE svg daar in zitten en dan een een absolute meegeven.  */
@@ -234,19 +247,16 @@ input:focus {
   opacity: 100;
 }
 
-.hero__svg-wave{
+.hero__svg-wave {
   z-index: 1;
 }
 
-
-
 /* Main Container */
 
-.main-container{
+.main-container {
   width: 70vw;
-  margin: auto; 
+  margin: auto;
 }
-
 
 /* Filter Bar */
 .cards__filter-bar {
@@ -260,6 +270,11 @@ input:focus {
   justify-content: center;
   align-items: center;
   z-index: 3;
+}
+
+.cards__card-number {
+  border-bottom: 2px solid white;
+  padding: 0 0.25rem;
 }
 
 .--btn {
@@ -285,18 +300,103 @@ input:focus {
 
 .cards__add-filter-btn p {
   color: #000;
+  margin-right: 0.6rem;
 }
 
 .cards__category-btn {
   display: flex;
-  align-items: center;
+  align-items: stretch;
+  padding: 0;
 }
 
 .cards__category-btn p {
   color: #000;
+  padding: 0.6rem 0.5rem;
 }
 
-.cards__category-btn i {
-  height: 100%;
-  border: 1px solid red;
+.cards__category-btn-arrow {
+  border-left: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+}
+
+/* (Country) Cards */
+.cards__container {
+  display: flex;
+  margin: rem;
+}
+
+.cards__card {
+  width: 33%;
+  height: 200px;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: rgba(0, 0, 0, 0.25) 2px 1px 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0.75rem;
+  margin: 0.5rem;
+}
+
+/* Card Top Part */
+.cards__card-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards__core-metric i {
+  margin-right: 0.4rem;
+}
+
+.cards__core-metric {
+  display: flex;
+  align-items: center;
+}
+
+.cards__core-metric-text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.cards__small-metric-text {
+  font-size: 0.4rem;
+}
+
+/* Card Middle Titles */
+.cards__card-middle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cards__card-city-text {
+  font-size: 1.2rem;
+}
+
+.cards__card-country-text {
+  font-size: 0.7rem;
+}
+
+/* Card Bottom Titles */
+.cards__card-bottom {
+  flex-wrap: nowrap;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 10px;
+}
+
+.cards__card-weather-icon {
+  font-size: 1.5rem;
+}
+
+/* City Modifiers */
+
+.--prague {
+  background: url("img/prague.jpg") no-repeat center center/cover;
 }
