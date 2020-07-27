@@ -2,6 +2,7 @@
 
 body {
   font-family: "Nunito", sans-serif;
+  color: #fff;
 }
 
 li {
@@ -43,24 +44,51 @@ input:focus {
   left: 0;
   z-index: 2;
   justify-content: flex-start;
+  margin-left: 0.5rem;
 }
 
 .navbar__logo img {
   width: 40px;
   transition: all 0.15s ease;
+  position: relative;
 }
 
 .navbar__logo img:hover {
   opacity: 0.7;
 }
 
+.navbar__logo:hover > .navbar__menu {
+  display: block;
+}
+
+.navbar__menu {
+  width: 300px;
+  height: 400px;
+  background: #fff;
+  position: absolute;
+  border-radius: 5px;
+  display: none;
+}
+
+.navbar__menu ul {
+  display: block;
+}
+
+.navbar__menu li {
+  color: #000;
+  margin: 1rem;
+}
+
 /* Set Button Positioning */
 .navbar__new-button {
-  font-size: 0.5rem;
+  font-size: 0.3rem;
   background: rgb(227, 56, 56);
   border-radius: 2px;
-  padding: 0.1rem 0.3rem;
+  padding: 0.1rem 0.2rem;
   color: white;
+  position: relative;
+  top: -10px;
+  left: -2px;
 }
 
 /* Fix that the first is the only one who doesn't get double REM */
@@ -80,6 +108,7 @@ input:focus {
   display: flex;
   align-items: center;
   height: 2.5rem;
+  color: #000;
 }
 
 .navbar__searchbox i {
@@ -93,8 +122,11 @@ input:focus {
   font-family: "Nunito", sans-serif;
   font-weight: bold;
   height: 100%;
-
+  color: #000;
   border: none;
+}
+
+.navbar__searchbox input:active {
 }
 
 .navbar__menu-items ul {
@@ -137,8 +169,6 @@ input:focus {
   font-size: 2.75rem;
   font-weight: bold;
   text-shadow: rgba(0, 0, 0, 0.25) 2px 1px 1px;
-
-  border: 1px solid red;
 }
 
 .hero__headline p {
@@ -146,15 +176,11 @@ input:focus {
   text-shadow: rgba(0, 0, 0, 0.25) 2px 1px 1px;
 }
 
-.hero__headline p:hover{
-
-  border: 1px solid red;
+.hero__headline p:hover {
 }
 
 .hero__headline:hover {
   opacity: 0.6;
-  
-  border: 1px solid green;
 }
 
 .hero__modal {
@@ -165,6 +191,7 @@ input:focus {
   border-radius: 4px;
   border: #ddd 1px solid;
   z-index: 2;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 20px 0px;
 }
 
 .hero__modal-thumbnail {
@@ -262,6 +289,8 @@ input:focus {
 .cards__filter-bar {
   display: flex;
   justify-content: space-between;
+  color: #000;
+  padding: 0 .5rem;
 }
 
 .cards__filter-bar-left,
@@ -270,11 +299,6 @@ input:focus {
   justify-content: center;
   align-items: center;
   z-index: 3;
-}
-
-.cards__card-number {
-  border-bottom: 2px solid white;
-  padding: 0 0.25rem;
 }
 
 .--btn {
@@ -324,11 +348,12 @@ input:focus {
 /* (Country) Cards */
 .cards__container {
   display: flex;
-  margin: rem;
+  flex-wrap: wrap;
+  justify-content: stretch;
 }
 
 .cards__card {
-  width: 33%;
+  width: 32%;
   height: 200px;
   border-radius: 5px;
   color: #fff;
@@ -380,6 +405,11 @@ input:focus {
 
 .cards__card-country-text {
   font-size: 0.7rem;
+}
+
+.cards__card-number {
+  border-bottom: 2px solid white;
+  padding: 0 0.25rem;
 }
 
 /* Card Bottom Titles */
