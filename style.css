@@ -45,16 +45,14 @@ input:focus {
   justify-content: flex-start;
 }
 
-
 .navbar__logo img {
   width: 40px;
-  transition: all .15s ease;
+  transition: all 0.15s ease;
 }
 
-.navbar__logo img:hover{
-  opacity: .70;
+.navbar__logo img:hover {
+  opacity: 0.7;
 }
-
 
 /* Set Button Positioning */
 .navbar__new-button {
@@ -68,12 +66,11 @@ input:focus {
 /* Fix that the first is the only one who doesn't get double REM */
 .navbar > div {
   margin: 1rem;
-
 }
 
 /* Check if this is not affecting the wrtong thinigs. Sich as children of div's  */
-.navbar__menu-items ul li:hover{
-opacity: .7;
+.navbar__menu-items ul li:hover {
+  opacity: 0.7;
 }
 
 .navbar__searchbox {
@@ -100,7 +97,6 @@ opacity: .7;
   border: none;
 }
 
-
 .navbar__menu-items ul {
   display: flex;
 }
@@ -116,23 +112,27 @@ opacity: .7;
 /* Hero */
 .hero {
   background: url("hero-bg.jpg") no-repeat center center/cover;
-  height: 80vh;
+  height: 50vh;
   position: relative;
+  margin-bottom: 2rem;
 }
 
 .hero__container {
   display: flex;
   height: 100%;
-  justify-content: space-around;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
   align-items: center;
 }
 
+/* Add Transparent overlay on the bg */
 .hero__container::before {
 }
 
 .hero__headline {
-  margin: 6rem;
-  width: 50vw;
+  margin: 0 3rem;
+  width: 40%;
 }
 
 .hero__headline h1 {
@@ -147,17 +147,18 @@ opacity: .7;
 }
 
 .hero__modal {
+  align-self: flex-end;
   background: #fff;
-  margin: 6rem;
-  width: 300px;
+  width: 350px;
   padding: 2rem;
   border-radius: 4px;
-  border: #DDD 1px solid;
+  border: #ddd 1px solid;
+  z-index: 2;
 }
 
-.hero__modal-thumbnail{
+.hero__modal-thumbnail {
   border-radius: 10px;
-  background: url('thumb.jpg') no-repeat center center/cover;
+  background: url("thumb.jpg") no-repeat center center/cover;
   height: 150px;
   width: 100%;
   display: flex;
@@ -167,15 +168,15 @@ opacity: .7;
   cursor: pointer;
 }
 
-.hero__modal-thumbnail:hover{
-  opacity: .9;
+.hero__modal-thumbnail:hover {
+  opacity: 0.9;
 }
 
 .hero__modal-thumbnail-btn {
   color: white;
 }
 
-.hero__modal-email-input input{
+.hero__modal-email-input input {
   line-height: 2rem;
   font-size: 1rem;
   font-family: "Nunito", sans-serif;
@@ -183,12 +184,12 @@ opacity: .7;
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 3px;
-  padding: .25rem .5rem;
+  padding: 0.25rem 0.5rem;
   margin-bottom: 1rem;
 }
 
-.hero__signup-btn{
-  background: rgb(255,71,66);
+.hero__signup-btn {
+  background: rgb(255, 71, 66);
   text-align: center;
   height: 2.5rem;
   font-family: "Nunito", sans-serif;
@@ -201,10 +202,101 @@ opacity: .7;
   margin-bottom: 1rem;
 }
 
+/* Section: Logo container (As Seen In) */
+
+.logo-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  width: 40%;
+  z-index: 4;
+  margin-bottom: 2rem;
+}
+
+.logo-container p {
+  color: #444;
+  font-size: 0.7rem;
+}
+
+.hero__logo img {
+  width: 75px;
+  filter: grayscale(100%);
+  opacity: 0.5;
+  z-index: 12;
+}
+
 /* De Wave moet zo in de hero class zitten dat de positionering direct van de bodem werkt. Daarvoor moet waarschijlijjk de hero klas een relative zijn. DE svg daar in zitten en dan een een absolute meegeven.  */
 /* Er moet een minimal height voor de header zijn */
-.hero__svg-wave svg{
+.hero__svg-wave svg {
   position: absolute;
-  bottom: -150px;
-  z-index: 10;
+  bottom: -50px;
+  opacity: 100;
+}
+
+.hero__svg-wave{
+  z-index: 1;
+}
+
+
+
+/* Main Container */
+
+.main-container{
+  width: 70vw;
+  margin: auto; 
+}
+
+
+/* Filter Bar */
+.cards__filter-bar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cards__filter-bar-left,
+.cards__filter-bar-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.--btn {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  margin: 0.25rem;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.--btn-primary {
+  color: #fff;
+  background: rgb(255, 71, 66);
+  border: 1px rgb(227, 56, 56) solid;
+}
+
+.cards__add-filter-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards__add-filter-btn p {
+  color: #000;
+}
+
+.cards__category-btn {
+  display: flex;
+  align-items: center;
+}
+
+.cards__category-btn p {
+  color: #000;
+}
+
+.cards__category-btn i {
+  height: 100%;
+  border: 1px solid red;
 }

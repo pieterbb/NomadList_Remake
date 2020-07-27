@@ -1,89 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>NomadList Remake</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet">
-</head>
-<body>
-
-<nav class="navbar">
-    <div class="navbar__logo">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar__logo">
         <a href="#" class="navbar__logo-link">
-        <img src="logo.svg" alt="">
-    </a>
-    </div>
-    <div class="navbar__searchbox">
+          <img src="logo.svg" alt="" />
+        </a>
+      </div>
+      <div class="navbar__searchbox">
         <i class="fas fa-search"></i>
-        <input type="text" placeholder="Search" class="navbar__searchbox-text">
-    </div>
+        <input
+          type="text"
+          placeholder="Search"
+          class="navbar__searchbox-text"
+        />
+      </div>
 
-<!-- Main Menubar -->
-    <div class="navbar__menu-items">
+      <!-- Main Menubar -->
+      <div class="navbar__menu-items">
         <ul>
-            <li><a href="#">Remote Jobs</a></li>
-            <li><a href="#">Remote Insurance</a></li>
-            <li><a href="#">Chat</a></li>
-            <li><a href="#">Forum</a></li>
-            <li><a href="#">Meetups <span class="navbar__new-button">New</span></a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#"><i class="fas fa-ellipsis-h"></i></a></li>
+          <li><a href="#">Remote Jobs</a></li>
+          <li><a href="#">Remote Insurance</a></li>
+          <li><a href="#">Chat</a></li>
+          <li><a href="#">Forum</a></li>
+          <li>
+            <a href="#">Meetups <span class="navbar__new-button">New</span></a>
+          </li>
+          <li><a href="#">FAQ</a></li>
+          <li>
+            <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+          </li>
         </ul>
-    </div>
-</nav>
-    
-<!-- Home Hero -->
-<section class="hero">
-    <div class="hero__container">
+      </div>
+    </nav>
+
+    <!-- Home Hero -->
+    <section class="hero">
+      <div class="hero__container">
         <div class="hero__headline">
-            <h1>🌍 Explore the world</h1>
-            <p>Join a global community of international travelers working remotely around the world</p>
-            <div class="hero__avatars">
-                <div class="hero__avatar"><img src="#" alt=""></div>
-                <div class="hero__avatar"><img src="#" alt=""></div>
-                <div class="hero__avatar"><img src="#" alt=""></div>
-            </div>
+          <h1>🌍 Explore the world</h1>
+          <p>
+            Join a global community of international travelers working remotely
+            around the world
+          </p>
+          <div class="hero__avatars">
+            <div class="hero__avatar"><img src="#" alt="" /></div>
+            <div class="hero__avatar"><img src="#" alt="" /></div>
+            <div class="hero__avatar"><img src="#" alt="" /></div>
+          </div>
         </div>
 
         <div class="hero__modal">
-            <div class="hero__modal-thumbnail">
-       
-                <div class="hero__modal-thumbnail-btn"><i class="fas fa-play-circle fa-4x"></i> </div>
+          <div class="hero__modal-thumbnail">
+            <div class="hero__modal-thumbnail-btn">
+              <i class="fas fa-play-circle fa-4x"></i>
             </div>
-            <div class="hero__modal-email-input"><input type="email" placeholder="Enter Your Email"></div>
-            <div class="hero__signup-btn"><a href="#">Join Nomad List</a></div>
+          </div>
+          <div class="hero__modal-email-input">
+            <input type="email" placeholder="Enter Your Email" />
+          </div>
+          <div class="hero__signup-btn"><a href="#">Join Nomad List</a></div>
         </div>
-
-
-    </div>
-    <div class="hero__svg-wave">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-            <path fill="#FFF" fill-opacity="1" d="M0,160L80,138.7C160,117,320,75,480,74.7C640,75,800,117,960,122.7C1120,128,1280,96,1360,80L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-          </svg>
-    </div>
-
-
+      </div>
+      <div class="hero__svg-wave">
+        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;"><path d="M-13.82,108.05 C117.66,188.97 438.20,36.02 580.41,165.28 L500.00,150.00 L0.00,150.00 Z" style="stroke: none; fill: #FFF;"></path></svg>
+      </div>
     </section>
 
-        <div class="logo-container">
-            <p>As seen in</p>
-            <div class="hero__logo"><img src="#" alt=""></div>
-            <div class="hero__logo"><img src="#" alt=""></div>
-            <div class="hero__logo"><img src="#" alt=""></div>
-            <div class="hero__logo"><img src="#" alt=""></div>
-            <div class="hero__logo"><img src="#" alt=""></div>
-            <div class="hero__logo"><img src="#" alt=""></div>
+    <!-- Section: Logo's As Seen In -->
+    <section class="logo-as-seen-in">
+      <div class="logo-container">
+        <p>as seen in</p>
+        <div class="hero__logo"><img src="img/bbc.webp" alt="" /></div>
+        <div class="hero__logo"><img src="img/cnbc.webp" alt="" /></div>
+        <div class="hero__logo"><img src="img/cnn.webp" alt="" /></div>
+        <div class="hero__logo"><img src="img/guardian.webp" alt="" /></div>
+        <div class="hero__logo"><img src="img/nyt-wide.webp" alt="" /></div>
+        <div class="hero__logo"><img src="img/usa-today.webp" alt="" /></div>
+      </div>
+    </section>
+
+
+    <!-- Main Area Container -->
+    <main>
+      <div class="main-container">
+        
+    <!-- Filter Bar -->
+    <section class="cards">
+      <div class="cards__filter-bar">
+        <div class="cards__filter-bar-left">
+          <div class="cards__all-filters-btn --btn --btn-primary">All Filters</div>
+          <div class="cards__add-filter-btn --btn">
+            <p>Add Filter</p>
+            <i class="fas fa-plus"></i>
+          </div>
         </div>
 
+        <div class="cards__filter-bar-right">
+          <div class="cards__main-filter --btn">🧑‍💻Cost for remote worker</div>
+          <div class="cards__view-btn --btn">🖼 Grid View</div>
+          <div class="cards__category-btn --btn">
+            <p> Overall score</p>
+              <i class="fas fa-arrow-down"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- (Location) Cards -->
+      <div class="cards__container">
+
+        <div class="cards__card">
+          <div class="cards__card-top">
+            <div class="cards__card-number">1</div>
+            <div class="cards__core-metric"><i class="fas fa-wifi"></i>
+            <div class="cards__core-metric-text">
+            32 <span class="cards__small-metric-text">Mbps</span>
+            </div>
+            </div>
+          </div>
+          <div class="cards__card-middle">
+            <div class="cards__card-city-text">Prague</div>
+            <div class="cards__card-country-text">Czechia</div>
+          </div>
+          <div class="cards__card-bottom">
+            <div class="cards__card-wether-icon">⛅️</div>
+            <div class="cards__card-weather-text">
+              <div class="small-metric-text">Feels Like</div>
+              <div class="cards__temperature-text"></div>
+            </div>
+            <div class="cards__card-aqi-text">
+              <div class="small-metric-text">AQI</div>
+              <div class="cards__aqi-text">25</div>
+            </div>
+          </div>
+          <div class="cards__card-price-text">$2,116 / mo</div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- Filter & Settings Bar -->
+
+    <!-- Cards -->
 
 
 
 
 
+  </div>
+</main>
 
-</body>
+  </body>
 </html>
