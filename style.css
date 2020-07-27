@@ -3,7 +3,9 @@
 body {
   font-family: "Nunito", sans-serif;
   color: #fff;
+  
 }
+
 
 li {
   list-style-type: none;
@@ -37,6 +39,7 @@ input:focus {
 
 .navbar {
   height: 70px;
+  width: 100%;
   display: flex;
   align-items: center;
   position: absolute;
@@ -44,13 +47,14 @@ input:focus {
   left: 0;
   z-index: 2;
   justify-content: flex-start;
-  margin-left: 0.5rem;
+
 }
 
 .navbar__logo img {
   width: 40px;
   transition: all 0.15s ease;
   position: relative;
+  margin-left: 0.5rem;
 }
 
 .navbar__logo img:hover {
@@ -75,23 +79,22 @@ input:focus {
   display: flex;
   color: #000;
   justify-content: space-evenly;
-padding: 0 .3rem;
+  padding: 0 0.3rem;
 }
 
 .navbar__menu-row:nth-child(even) {
   border-bottom: 1px dotted #ddd;
 }
 
-.navbar__menu-row div{
+.navbar__menu-row div {
   width: 50%;
-  padding: .5rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
 
-
-.navbar__menu-row div:hover{
- background: rgb(255, 71, 66);
- color: #FFF;
+.navbar__menu-row div:hover {
+  background: rgb(255, 71, 66);
+  color: #fff;
 }
 /* Set Button Positioning */
 .navbar__new-button {
@@ -103,7 +106,6 @@ padding: 0 .3rem;
   position: relative;
   top: -10px;
   left: -2px;
-  overflow: hidden;
 }
 
 /* Fix that the first is the only one who doesn't get double REM */
@@ -212,24 +214,22 @@ padding: 0 .3rem;
   opacity: 0.6;
 }
 
-.hero_avatars{
-  display:flex;
+.hero_avatars {
+  display: flex;
   flex-wrap: nowrap;
   position: relative;
 }
-.hero__avatars img{
+.hero__avatars img {
   width: 40px;
-  border-radius: 50%;;
-  border: 2px #FFF solid;
+  border-radius: 50%;
+  border: 2px #fff solid;
 }
 
-.hero__avatars img{
-display: inline-block;
-position: relative;
-margin-right:-10px;
+.hero__avatars img {
+  display: inline-block;
+  position: relative;
+  margin-right: -10px;
 }
-
-
 
 .hero__modal {
   align-self: flex-end;
@@ -470,22 +470,21 @@ margin-right:-10px;
   font-size: 10px;
 }
 
-.cards__card-bottom-left{
-
+.cards__card-bottom-left {
   display: flex;
   align-items: center;
 }
 
 .cards__card-bottom-left > * {
-  margin: 0 .25rem;
+  margin: 0 0.25rem;
 }
 
 .cards__card-weather-icon {
   font-size: 1.5rem;
 }
 
-.cards__card-price-text{
- font-size: 1rem;
+.cards__card-price-text {
+  font-size: 1rem;
 }
 
 /* City Modifiers */
