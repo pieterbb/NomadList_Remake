@@ -103,6 +103,7 @@ padding: 0 .3rem;
   position: relative;
   top: -10px;
   left: -2px;
+  overflow: hidden;
 }
 
 /* Fix that the first is the only one who doesn't get double REM */
