@@ -3,9 +3,7 @@
 body {
   font-family: "Nunito", sans-serif;
   color: #fff;
-  
 }
-
 
 li {
   list-style-type: none;
@@ -47,7 +45,6 @@ input:focus {
   left: 0;
   z-index: 2;
   justify-content: flex-start;
-
 }
 
 .navbar__logo img {
@@ -318,7 +315,7 @@ input:focus {
 /* Er moet een minimal height voor de header zijn */
 .hero__svg-wave svg {
   position: absolute;
-  bottom: -50px;
+  bottom: -30px;
   opacity: 100;
 }
 
